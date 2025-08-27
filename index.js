@@ -29,7 +29,49 @@ console.log(person["city"]);
 console.log("hobby:", person.hobby);
 console.log(person["hobyy"]);
 
+// opgver 2
+//  ...................................................................................
 
+let person2 = {
+    firstname: "Ole",
+    lastname: "Erling",
+    married: true,
+    age: 54,
+    hometown: "Roskilde",
+    hobbies: ["Reptiler", "Frimærker", "Programmering"],
+    pet: {
+        type: "Klapperslange",
+        name: "Holger"
+    }
+};
+
+let profileDiv = document.getElementById("profile");
+
+profileDiv.innerHTML = `
+    <h2>${person2.firstname} ${person2.lastname}</h2>
+    <p><strong>Gift:</strong> ${person2.married ? "Ja" : "Nej"}</p>
+    <p><strong>Alder:</strong> ${person2.age}</p>
+    <p><strong>By:</strong> ${person2.hometown}</p>
+    <p><strong>Kæledyr:</strong> ${person2.pet.type} ved navn ${person2.pet.name}</p>
+    <div class="hobbies">
+        <strong>Hobbyer:</strong>
+        <ul id="hobbyList"></ul>
+    </div>  
+`;
+
+let hobbyList = document.getElementById("hobbyList");
+
+for (let i = 0; i < person2.hobbies.length; i++) {
+    let li = document.createElement("li");
+    li.textContent = person2.hobbies[i];
+    hobbyList.appendChild(li);
+
+    
+    console.log("Hobby:", person2.hobbies[i]);
+}
+
+console.log("Kæledyrstype:", person2.pet.type);
+console.log("Kæledyrsnavn:", person2.pet.name);
 
 
 

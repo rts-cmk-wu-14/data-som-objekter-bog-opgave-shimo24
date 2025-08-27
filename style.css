@@ -23,3 +23,22 @@ h2 {
 p {
   margin: 8px 0;
 }
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.profile {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 400px;
+    background-color: #fff;
+}
+
+.hobbies {
+    margin-top: 10px;
+}
